@@ -1,6 +1,5 @@
 #!/usr/bin/python
-import socket,sys
-import colorama
+import socket,sys,colorama
 from colorama import Fore, Back, Style
 colorama.init(autoreset=True)
 
@@ -12,4 +11,4 @@ else:
         for porta in range(1,65535):
                 meusocket = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
                 if meusocket.connect_ex((sys.argv[1], porta)) == 0:
-                        print(f"{Fore.GREEN}Port {porta} Open :D"
+                        print(f"{Fore.GREEN}Port {porta} Open :D")
